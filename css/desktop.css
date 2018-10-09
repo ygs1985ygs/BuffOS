@@ -1,0 +1,269 @@
+body,
+html {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+}
+
+.buff-deskall {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: black no-repeat fixed;
+	background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20171103/8762d2aca9b24a738f54275feca740dc.jpeg);
+	position: relative;
+	background-size: 100% 100%;
+}
+
+.buff-desktop {
+	width: 100%;
+	height: calc(100% - 40px);
+	//position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	background-color: transparent;
+	writing-mode: vertical-lr;
+}
+
+
+/*任务栏*/
+
+.buff-taskbar {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	height: 40px;
+	background-color: rgba(0, 0, 0, 0.9);
+	z-index: 451703143;
+}
+
+.buff-start-btn {
+	float: left;
+	width: 40px;
+	height: 100%;
+	line-height: 45px;
+	text-align: center;
+}
+
+.buff-start-btn ::before,
+.buff-start-message ::before {
+	font-size: 20px;
+	color: white;
+}
+
+.buff-start-tasks {
+	height: 100%;
+	float: left;
+	width: calc(100% - 160px);
+	overflow: auto;
+}
+
+.buff-start-time {
+	float: left;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+	height: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	transition: background-color 0.3s;
+	font-size: 12px;
+	line-height: 20px;
+	padding: 0 5px;
+}
+
+.buff-showhover:hover {
+	background-color: rgba(106, 105, 100, 0.71);
+	cursor: pointer;
+}
+
+.buff-start-message {
+	float: left;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+	height: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	transition: background-color 0.3s;
+	padding: 0 5px;
+	width: 40px;
+}
+
+.buff-start-backdesk {
+	float: left;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+	height: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	transition: background-color 0.3s;
+	border-left: grey 1px solid;
+	width: 10px;
+	margin-left: 3px;
+	padding: 0 !important;
+}
+
+.taskbar-task {
+	float: left;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+	height: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	transition: background-color 0.3s;
+	box-sizing: border-box;
+	max-width: 140px;
+	border-bottom: 4px solid #707070;
+	font-size: 12px;
+	word-break: keep-all;
+	padding: 0 10px;
+	margin-right: 1px;
+	position: relative;
+	width: calc(50% - 1px);
+}
+
+
+/*任务栏--end*/
+
+
+/*桌面图标*/
+
+.buff-program {
+	width: 80px;
+	max-height: 95px;
+	overflow: hidden;
+	transition: all 0.5s;
+	display: inline-block;
+	padding: 0px 10px;
+	/*margin-top: 5px;*/
+}
+
+.buff-program div i {
+	width: 60px;
+	max-height: 60px;
+	overflow: hidden;
+	margin: 0 auto;
+	color: white;
+	box-sizing: border-box;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	text-align: center;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	display: block;
+	font-size: 50px;
+	line-height: 50px;
+}
+
+.buff-program * {
+	writing-mode: lr-tb;
+}
+
+.buff-program div {
+	color: white;
+	font-size: 12px;
+	text-align: center;
+	line-height: 18px;
+	margin-bottom: 5px;
+}
+
+.buff-program p {
+	margin-top: 65px;
+	margin-left: -70px;
+	width: 80px;
+	text-align: center;
+	font-size: 12px;
+	color: white;
+	line-height: 15px;
+}
+
+
+/*桌面图标--end*/
+
+/*开始按钮菜单*/
+.buff-start{
+	color:white;
+	position: fixed;
+    bottom: 40px;
+    background-color: rgba(19,23,28,0.81);
+    height: 60%;
+    width: 75%;
+    max-width: 300px;
+    overflow: auto;
+    padding-left: 10px;
+    z-index: 1000;
+    overflow-y: hidden;
+    transition: bottom 0.5s;
+}
+/*开始按钮菜单--end*/
+
+/*消息信息*/
+.buff-showmessage{
+	position: fixed;
+    right: 0;
+    bottom: 41px;
+    width: 350px;
+    background-color: rgba(19,23,28,0.81);
+    height: calc(100% - 42px);
+    transition: all 0.5s;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: white;
+    box-sizing: border-box;
+    z-index: 451703143;
+}
+.buff-showmessage >.title{
+	height: 40px;
+    background: darkslategrey;
+}
+.buff-showmessage .title h4{
+	margin-top: 5px;
+    float: left;
+    margin-left: 5px;
+}
+.buff-message_clean_all{
+	float: right;
+    font-size: 8px;
+    margin-top: 20px;
+    margin-right: 10px;
+    color: grey;
+}
+.buff-message_clean_all:hover{
+	color: white;
+}
+.buff-showmessage >.title:hover{
+    background-color: rgba(255, 255, 255, 0.19);
+	cursor: pointer;
+}
+.buff-showmessage .msgs .am-alert {
+	margin-bottom: 0px !important;
+	margin-top: 2px !important;
+}
+.twinkle{
+	 animation: flash 1.2s linear infinite;
+}
+@keyframes flash{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.buff-showmessage .msgs .am-alert li{
+	list-style: none;
+	    padding: 0px !important;
+    margin-top: 5px !important;
+}
+.buff-showmessage .msgs .am-alert ul{
+	list-style: none;
+	    padding: 0px !important;
+    margin-top: 5px !important;
+}
+/*消息信息--end*/
